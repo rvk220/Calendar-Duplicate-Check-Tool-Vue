@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div></div>
+    <select onchange="changeLang(value)">
+    <option value="ru">Русский</option>
+    <option value="uk">Українська</option>
+    <option value="en">English</option>
+    </select>
+    <h1>Calendar Duplicate Check Tool</h1>
+    <p>
+        Вас приветствует Calendar Duplicate Check Tool (инструмент проверки дупликатов календарей).
+        Здесь Вы можете проверить, календари за какие годы подходят для выбранного Вами года (от 1901 до 2100).
+        Чтобы осуществить проверку, введите номер года и нажмите на кнопку "Подтвердить".
+    </p>
+    <input type = "number" id = "yearInput" value = "" min="1901" max="2100"
+    oninput = "buttonState()">
+    <button type="button" id="submitButton" disabled
+    onclick="setOutputRu(document.getElementById('yearInput').value)">
+        Подтвердить</button>
+        <script src="script.js"></script>
+    <p id="yearList"></p>
+</body>
+</html>

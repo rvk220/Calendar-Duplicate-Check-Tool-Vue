@@ -1,0 +1,20 @@
+div {
+    width:100%;
+    height:100%;
+    background: url('photo_2020-10-24_13-40-08.jpg');
+    opacity: 0.2;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+}
+h1{
+    font-style: oblique;
+    color:saddlebrown;
+}
+
+select{
+    position: absolute;
+    top: 2px;
+    right: 2px;
+}
