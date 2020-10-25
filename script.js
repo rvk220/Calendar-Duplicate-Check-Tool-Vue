@@ -99,6 +99,7 @@ function buttonState() {
     let input = document.getElementById('yearInput').value;
     let isCorrect = isInputCorrect(input);
     document.getElementById("submitButton").disabled = !isCorrect;
+    document.getElementById("yearInput").style["border-color"] = (isCorrect) ? "green" : "red"; 
 }
 
 function changeLang(lang){
