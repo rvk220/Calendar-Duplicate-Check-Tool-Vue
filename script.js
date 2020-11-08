@@ -52,9 +52,11 @@ function setResult(input, lang) {
 		elid("dwSpan").innerHTML = getDayOfWeekName(dw1Jan, lang);
 		elid("resultListSpan").innerHTML = resultList;
 		elid("yearP").style.display = "block";
+		elid("wrongInputP").style.display = "none";
 		setTimeout(()=>{elid("yearP").style.fontSize="100%";}, 4);
     } else {
 		elid("wrongInputP").style.display = "block";
+		elid("yearP").style.display = "none";
 	}
 }
 
@@ -66,8 +68,7 @@ function clearResult() {
 
 function buttonState() {
     const isCorrect = isInputCorrect(elid('yearInput').value);
-	elid("submitButton").classList.toggle("buttonDimmed", !isCorrect);
-	elid("submitButton").classList.toggle("buttonSubmittable", isCorrect);
+	elid("submitButton").setAttribute("class", (isCorrect ? "buttonSubmittable" : "buttonDimmed"));
 }
 
 function isEnterPressed(keyUpEvent) {
@@ -80,6 +81,7 @@ function clickSubmitButton(lang) {
 	setResult(elid('yearInput').value, lang);
 	elid('yearInput').value = '';
 	elid('yearInput').blur();
+	elid("submitButton").setAttribute("class", "buttonDimmed");
 }
 
 function changeLang(lang){
