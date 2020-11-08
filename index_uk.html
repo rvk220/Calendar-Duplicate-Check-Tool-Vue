@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div id="selectDiv">
+		<select id="langSelect" data-default-value="uk" onchange="changeLang(value)">
+		<option value="uk">Українська</option>
+		<option value="ru">Русский</option>
+		<option value="en">English</option>
+		</select>
+	</div>
+    <h1>Інструмент перевірки</br>повторень календарів</h1>
+    <p>
+       Вас вітає Інструмент перевірки повторень календарів.
+       Тут Ви можете перевірити, календарі за які роки підходять для вибраного Вами року (від 1901 до 2100).
+       Щоб здійснити перевірку, введіть номер року та натисніть на кнопку "Підтвердити" або "Enter".
+    </p>
+	<div id=buttonAndInput>
+		<input type = "number" id = "yearInput" value = "" min="1901" max="2100"
+		onkeyup = "isEnterPressed(event)" oninput="buttonState()" onfocus="clearResult()"></input>
+		<button type="button" id="submitButton" class="buttonDimmed" onclick="clickSubmitButton('uk')">
+			Підтвердити</button>
+	</div>
+    <script src="script.js"></script>
+    <p id="yearP" style="display:none;">
+		Ви ввели номер року <span id="yNumSpan" style="font-style:italic;"></span>. Це <span id="nonLeapSpan">не</span>високосний рік, першим днем якого є <span id="dwSpan"></span>. Роки із таким самим календарем: <span id="resultListSpan"></span>.
+	</p>
+	<p id="wrongInputP" style="display:none;">
+		Хибне введення! Номер року повинен бути числом у межах від 1901 до 2100 (включно).
+	</p>
+</body>
+</html>

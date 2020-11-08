@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div id="selectDiv">
+		<select id="langSelect" data-default-value="en" onchange="changeLang(value)">
+		<option value="en">English</option>
+		<option value="uk">Українська</option>
+		<option value="ru">Русский</option>
+		</select>
+	</div>
+    <h1>Calendar Duplicate</br>Check Tool</h1>
+    <p>
+        Welcome to Calendar Duplicate Check Tool! It allows you
+        to check calendar duplicates for a paticular year (between 1901 and 2100), i.e.
+        calendars for which else years you can use in this year.
+        To launch a check, please enter a year number and hit the button "Submit" or "Enter".
+    </p>
+	<div id=buttonAndInput>
+		<input type = "number" id = "yearInput" value = "" min="1901" max="2100"
+		onkeyup = "isEnterPressed(event)" oninput="buttonState()" onfocus="clearResult()"></input>
+		<button type="button" id="submitButton" class="buttonDimmed" onclick="clickSubmitButton('en')">
+			Submit</button>
+	</div>
+    <script src="script.js"></script>
+    <p id="yearP" style="display:none;">
+		You have enterend the year number <span id="yNumSpan" style="font-style:italic;"></span>. It is a <span id="nonLeapSpan">non-</span>leap year starting with <span id="dwSpan"></span>. Years with the same calendar: <span id="resultListSpan"></span>.
+	</p>
+	<p id="wrongInputP" style="display:none;">
+		Error: wrong input! You can enter and check year numbers only within the range between 1901 and 2100 (inclusive).
+	</p>
+</body>
+</html>
