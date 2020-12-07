@@ -27,9 +27,7 @@ function getDayOfWeekName(dayOfWeek1To7, lang) {
     return name[dayOfWeek1To7-1];
 }
 
-const elid = (id) => {
-	return document.getElementById(id);
-}
+const elid = id => document.getElementById(id);
 
 function isInputCorrect(input) {
     return !!input.match(/^(19[1-9]\d|190[1-9]|20\d\d|2100)$/);
