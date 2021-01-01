@@ -82,9 +82,6 @@ function clickSubmitButton(lang) {
 	elid("submitButton").setAttribute("class", "buttonDimmed");
 }
 
-function changeLang(lang){
-    let langLink = document.createElement("a");
-	elid("langSelect").value = elid("langSelect").getAttribute("data-default-value");
-    langLink.href = "index" + (lang !=='en' ? "_" + lang : "") + ".html";
-    langLink.click();
+function changeLang(lang) {
+    window.location.href = `index${lang !=='en' ? `_${lang}` : ''}.html`;
 }
