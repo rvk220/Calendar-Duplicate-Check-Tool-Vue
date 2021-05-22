@@ -1,0 +1,82 @@
+body{
+	margin:auto;
+	font-size:4.1vmin;
+	max-width: 130vmin;
+	padding:2vmin;
+    background-image: url(/background.jpg);
+}
+
+p{
+	padding: 1vmin;
+	text-align:justify;
+}
+
+.withTransition {
+	transition:font-size 0.2s linear;
+}
+
+.zeroFontSize {
+	font-size: 0%;
+}
+
+.wrongInputP {
+	color: red;
+	opacity: 0.5;
+}
+
+.buttonDimmed {
+	opacity:0.5;
+	color:grey;
+	border-color:grey;
+}
+
+.buttonOk {
+	color:green;
+	border-color: green;
+}
+
+button {
+	border-style: solid;
+	font-size:130%;
+}
+
+.buttonAndInput{
+    display: flex;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+	margin: 0vmin;
+	padding: 0vmin;
+	text-align:center;
+    font-style: oblique;
+    color:saddlebrown;
+	font-size: 170%;
+}
+
+select{
+	font-size: 100%;
+	margin: 0vmin 1vmin 0vmin;
+	float: right;
+	text-align: center;
+	text-align-last: center;
+}
+
+.selectDiv {
+	display: box;
+	overflow:hidden;
+	justify-content: right;
+	margin: 0vmin;
+	padding:0vmin;
+}
+
+input {
+	font-size:130%;
+	margin-right: 2vmin;
+}
+
+.italic {
+	font-style:italic;
+}
