@@ -10,7 +10,7 @@ const functions = {
 
     checkInput(input) {
         input = Number(input);
-        return input >= 1901 && input <= 2100;
+        return input >= 1901 && input <= 2100 && Number.isInteger(input);
     },
 
     getDayOfWeekJan1(year) {
